@@ -12,7 +12,7 @@ export default new vueRouter({
       path: "/",
       component: () => import("@/views/luckEnd/raffle"),
       name: "raffle",
-      meta: { title: "抽奖" },
+      meta: { title: "抽奖3" },
     },
     {
       path: "/keep",
