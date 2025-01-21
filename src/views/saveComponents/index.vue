@@ -97,7 +97,6 @@ export default {
       alert(error);
     },
     chuli() {
-      // console.log(this.$refs.com1);
       // this.$set(this.$refs.com1.$data, "form", { name: "999" });
       // this.$refs.com1.$forceUpdate();
     },
