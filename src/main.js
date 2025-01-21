@@ -10,12 +10,15 @@ import "element-ui/lib/theme-chalk/index.css";
 // publicCom.install(Vue);
 // Vue.component('wangTest',publicCom.WangTest)
 // console.log(publicCom.WangTest)
+import '@/plugins/validate.js'; //自定义校验
 
 Vue.config.productionTip = false;
 
 Vue.use(ElementUI);
 console.log(Vue.prototype);
 
+import PathInput from '@/views/inputPatch/pathInput.js';
+Vue.use(PathInput)
 // Vue.prototype.$button.config(
 //   {
 //     type:'danger'

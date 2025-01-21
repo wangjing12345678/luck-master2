@@ -1,9 +1,8 @@
 import Vue from "vue";
 import vueRouter from "vue-router";
-import App  from '@/App'
+import App from "@/App";
 
 Vue.use(vueRouter);
-
 
 export default new vueRouter({
   // mode:'history',
@@ -203,7 +202,41 @@ export default new vueRouter({
       name: "testEharts",
       meta: { title: "1212" },
     },
-
-    
+    {
+      path: "/validSoonTest",
+      component: () => import("@/views/validSoonTest/index.vue"),
+      name: "validSoonTest",
+      meta: { title: "1212" },
+    },
+    {
+      path: "/inputPatch",
+      component: () => import("@/views/inputPatch"),
+      name: "inputPatch",
+      meta: { title: "1212" },
+    },
+    {
+      path: "/AbortController",
+      component: () => import("@/views/AbortController/index.vue"),
+      name: "AbortController",
+      meta: { title: "1212" },
+    },
+    {
+      path: "/tonxin",
+      component: () => import("@/views/tonxin/index.vue"),
+      name: "tonxin",
+      meta: { title: "1212" },
+    },
+    {
+      path: "/tonxin2",
+      component: () => import("@/views/tonxin/index2"),
+      name: "tonxin2",
+      meta: { title: "1212" },
+    },
+    {
+      path: "/saveComponents",
+      component: () => import("@/views/saveComponents/index"),
+      name: "saveComponents",
+      meta: { title: "缓存整个组件功能" },
+    },
   ],
 });
