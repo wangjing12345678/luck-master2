@@ -1,0 +1,52 @@
+<html>
+<style>
+    /* 采购意向
+     微软雅黑，2.5行高，默认16号字
+     大标题用h2标签，字号为24号加粗
+     一级标题用h3标签，字号为18号加粗
+     二级标题用h4标签，字号为16号加粗
+     三级标题用h5标签，字号为16号加粗，首行缩进28px
+     段落字号16px，首行缩进28px
+     普通文字为16号字体
+     表格标题为加粗，表格字号为16号字体，高度为32px，表格外部上下间距10px，左右居中；单元格内部上下间距5px，左右间距8px；
+     标题加粗，自己改为<strong></strong>或者加样式。
+     标题段落间距为8px
+  */
+
+    .noticeArea{ line-height:2; font-size: 14px;text-align: justify;font-family: '微软雅黑';}
+    .noticeArea *{padding:0; margin:0;}
+    .noticeArea h2{font-size: 24px; text-align: center; margin-bottom: 20px; font-weight: bold}
+    .noticeArea h3{font-size: 18px;font-weight: normal;line-height:40px;}
+    .noticeArea h4{font-size: 16px;font-weight: normal;line-height:40px;}
+    .noticeArea h5{font-size: 16px;text-indent: 28px;font-weight: normal;}
+    .noticeArea p{ text-indent: 28px; font-size: 14px;}
+    .noticeArea .noticeTable{font-size: 14px;border-collapse: collapse; border-spacing: 0; width:100%;margin:10px auto;}
+    .noticeArea .noticeTable tr td{border-collapse: collapse; border:1px solid #333;text-align: center;padding: 5px 8px;}
+    .noticeArea .noticeTable tr th{ font-weight: bold; text-align: center; border:1px solid #333;padding: 5px 8px;}
+    .noticeArea .noticeTable tr{height: 32px;}
+	.noticeArea .text-center {text-align:center;}
+
+    @media print {
+        .noticeArea { font-family: '微软雅黑'; line-height:1.8; font-size: 18px;text-align: justify;}
+        .noticeArea  *{padding:0; margin:0}
+        .noticeArea  .focuscontent{ color:#337ab7;}
+        .noticeArea  h2{font-size: 34px; text-align: center; margin-bottom: 25px;font-family: SimHei; }
+        .noticeArea  h3{font-size: 24px; font-weight: normal;line-height:40px;}
+        .noticeArea  h4{font-size: 21px; font-weight: normal;line-height:40px;}
+        .noticeArea  h5{font-size: 18px;font-weight: normal;}
+        .noticeArea  p{ text-indent: 32px; font-size: 18px;}
+        .noticeArea  .noticeTable{font-size: 16px;border-collapse: collapse; border-spacing: 0; width:100%;margin:15px auto;}
+        .noticeArea  .noticeTable tr td{border-collapse: collapse; border:1px solid #333;padding: 2px 6px; }
+        .noticeArea  .noticeTable tr th{ font-weight: bold; text-align: center;padding: 2px 6px;}
+        .noticeArea  .noticeTable tr{height: 32px;}
+
+    }
+</style>
+<div class="noticeArea">
+	<h2 class="text-center">XXXXXXXXXXXX需求调研公告名称XXXXXXXXXXXX</h2>
+    <p style="font-size: 15px" class="notice-text">&nbsp;&nbsp;请输入</p>
+    <P style="text-align: right"><#if (orgName)?exists>${orgName}</#if></P>
+    <p style="text-align: right"><#if (publishDate)?exists>${publishDate?string("yyyy年MM月dd日")} <#else >XXXX年XX月XX日 </#if>
+    </p>
+</div>
+</html>
