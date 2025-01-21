@@ -11,7 +11,7 @@
 
       <!-- 预览签名 -->
       <div v-if="signatureImage" class="preview">
-        <h3>签名预览</h3>
+        <h3>签名预览232323</h3>
         <img :src="signatureImage" alt="签名" />
       </div>
     </div>
