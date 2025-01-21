@@ -6,7 +6,7 @@
     <com2 ref="com2"></com2>
 
     <div class="signature-page">
-      <h2>手写www签名</h2>
+      <h2>手写www22签名</h2>
       <Signature :width="800" :height="300" save-format="png" @save="handleSave" @clear="handleClear" @error="handleError" ref="signatureRef" />
 
       <!-- 预览签名 -->
