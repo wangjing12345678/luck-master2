@@ -1,0 +1,70 @@
+
+#myChart {
+
+    width: 300px;
+    height: 300px;
+}
+#map{
+    position: relative;
+    height: 500px;
+}
+/*.mapboxgl-map{*/
+    /*top:60px!important*/
+/*}*/
+.labelclass{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background: rgba(239,228,238,1);
+    border: 1px solid #e9c6cf;
+    position: relative;
+}
+.labelclass:after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: #ca1d22;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.messageDiv{
+    width: 100px;
+    height: 50px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 0 -300px -300px 0;
+}
+.sonClass{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 40px;
+    width: 116px;
+    height: 55px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    padding: 8px;
+}
+.cityName{
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.cityDate{
+    font-size: 12px;
+    color: #666666;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+
+

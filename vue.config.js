@@ -4,7 +4,7 @@ function resolve(dir) {
 }
 module.exports = {
   publicPath: "./",
-  outputDir: "./kkk/dist",
+  outputDir: "dist",
   assetsDir: "./static",
   productionSourceMap: false,
   // configureWebpack: config => {
