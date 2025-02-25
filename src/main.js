@@ -16,6 +16,7 @@ Vue.config.productionTip = false;
 
 Vue.use(ElementUI);
 console.log(Vue.prototype);
+import '../permission.js'
 
 import PathInput from '@/views/inputPatch/pathInput.js';
 Vue.use(PathInput)

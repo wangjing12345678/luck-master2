@@ -7,11 +7,16 @@
       2323
       2323
     </div>
+    <aa></aa>
   </div>
 </template>
 
 <script>
+import aa from './aa.vue'
 export default {
+  components:{
+    aa
+  }
 
 }
 </script>

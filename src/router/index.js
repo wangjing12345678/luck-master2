@@ -17,7 +17,7 @@ export default new vueRouter({
       path: "/keep",
       component: () => import("@/views/keepalive/index.vue"),
       name: "keepalive",
-      meta: { title: "1212" },
+      meta: { title: "keepalive自己实现" },
       children: [
         {
           path: "index1",
@@ -140,7 +140,7 @@ export default new vueRouter({
     {
       path: "/testProxy",
       component: () => import("@/views/testProxy/index"),
-      name: "testTouChuan",
+      name: "testProxy",
       meta: { title: "1212" },
     },
     {
@@ -237,6 +237,30 @@ export default new vueRouter({
       component: () => import("@/views/saveComponents/index"),
       name: "saveComponents",
       meta: { title: "缓存整个组件功能" },
+    },
+    {
+      path: "/scrolltoend",
+      component: () => import("@/views/scrolltoend/index"),
+      name: "scrolltoend",
+      meta: { title: "左边滑动右边对应位置亮起" },
+    },
+    {
+      path: "/createElement-bind",
+      component: () => import("@/views/createEle/createElement-bind.vue"),
+      name: "createElement-bind",
+      meta: { title: "创建元素" },
+    },
+    {
+      path: "/leida",
+      component: () => import("@/views/leida/index.vue"),
+      name: "leida",
+      meta: { title: "雷达效果" },
+    },
+    {
+      path: "/leida2",
+      component: () => import("@/views/leida/index2.vue"),
+      name: "leida2",
+      meta: { title: "雷达效果" },
     },
   ],
 });
