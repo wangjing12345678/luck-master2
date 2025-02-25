@@ -1,0 +1,62 @@
+
+.container[data-v-6e821cf4] {
+  display: flex;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+}
+.left-container[data-v-6e821cf4] {
+  flex: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.section[data-v-6e821cf4] {
+  height: 800px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.section-title[data-v-6e821cf4] {
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+.right-nav[data-v-6e821cf4] {
+  width: 120px;
+  padding: 20px 10px;
+  background: #f8f9fa;
+  overflow-y: auto;
+}
+.nav-item[data-v-6e821cf4] {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.nav-item[data-v-6e821cf4]:hover {
+  background: #e9ecef;
+}
+.nav-item.active[data-v-6e821cf4] {
+  color: #fff;
+  background: #1890ff;
+  font-weight: 500;
+}
+.nav-item.visible[data-v-6e821cf4] {
+  color: #1890ff;
+}
+
+/* 自定义滚动条样式 */
+.left-container[data-v-6e821cf4]::-webkit-scrollbar {
+  width: 6px;
+}
+.left-container[data-v-6e821cf4]::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+.left-container[data-v-6e821cf4]::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
