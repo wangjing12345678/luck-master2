@@ -217,6 +217,7 @@ export default {};
   font-size: 32px;
   color: #fff;
   z-index: 99;
+  box-shadow: 0px 0px 60px 0px rgba(55,114,255,0.4);
 }
 
 .tangjialing {
