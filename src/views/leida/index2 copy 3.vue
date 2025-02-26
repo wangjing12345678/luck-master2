@@ -1,4 +1,12 @@
+<template>
+  <div class="loader"></div>
+</template>
 
+<script>
+export default {};
+</script>
+
+<style>
 * {
   margin: 0;
   padding: 0;
@@ -37,9 +45,9 @@
 
 /* 定义动画 */
 @keyframes spin {
-to {
+  to {
     /* 旋转一周 */
     transform: rotate(1turn);
+  }
 }
-}
-
+</style>

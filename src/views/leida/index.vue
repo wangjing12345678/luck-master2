@@ -1,6 +1,14 @@
 <template>
   <div class="wrap">
     <div class="container">
+      <span style="--i: 1"></span>
+      <span style="--i: 3"></span>
+      <span style="--i: 5"></span>
+      <span style="--i: 7"></span>
+      <span style="--i: 9"></span>
+      <!-- <span style="--i: 6"></span>
+      <span style="--i: 7"></span>
+      <span style="--i: 8"></span> -->
       <div class="main">
         <div class="tangjialing">
           <div class="center">
@@ -44,6 +52,43 @@ export default {};
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* .box {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: lawngreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.container span {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  /* border: 1px solid #fff; */
+  background-color: rgba(189, 205, 251, 0.5);
+  box-sizing: border-box;
+  border-radius: 100%;
+  animation: animate 3s linear infinite;
+  animation-delay: calc(0.5s * var(--i));
+}
+
+@keyframes animate {
+  0% {
+    width: 260px;
+    height: 260px;
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+  }
 }
 /* .container {
   display: flex;
@@ -302,7 +347,7 @@ export default {};
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 32px;
+  font-size: 30px;
   color: #fff;
 }
 </style>
