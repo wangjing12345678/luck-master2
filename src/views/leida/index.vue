@@ -6,9 +6,14 @@
       <span style="--i: 5"></span>
       <span style="--i: 7"></span>
       <span style="--i: 9"></span>
-      <!-- <span style="--i: 6"></span>
-      <span style="--i: 7"></span>
-      <span style="--i: 8"></span> -->
+      <div class="width-border-box">
+        <span style="--i: 1"></span>
+        <span style="--i: 3"></span>
+        <span style="--i: 5"></span>
+        <span style="--i: 7"></span>
+        <span style="--i: 9"></span>
+      </div>
+      <div class="back-image"></div>
       <div class="main">
         <div class="tangjialing">
           <div class="center">
@@ -45,9 +50,10 @@ export default {};
 .container {
   width: 600px;
   height: 600px;
-  background-image: url("~@/assets/image/15531740478639_.pic.jpg");
+  background: url("~@/assets/image/aa.png");
+  /* background-image: url("~@/assets/image/15531740478639_.pic.jpg"); */
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 100%;
   background-position: center;
   display: flex;
   justify-content: center;
@@ -62,31 +68,83 @@ export default {};
   justify-content: center;
   align-items: center;
 } */
+ .back-image{
+ 
+
+ }
 
 .container span {
   position: absolute;
-  width: 260px;
-  height: 260px;
+  width: 300px;
+  height: 300px;
+
   /* border: 1px solid #fff; */
-  background-color: rgba(189, 205, 251, 0.5);
+  /* background-color: rgba(189, 205, 251, 0.5);
+   */
+  background: rgba(255, 255, 255, 0.2);
+  /* background: red; */
+  /* background: red; */
+
+  /* background: red; */
   box-sizing: border-box;
   border-radius: 100%;
   animation: animate 3s linear infinite;
+  animation-delay: calc(0.5s * var(--i));
+  border: none;
+}
+.width-border-box {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.width-border-box span {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255,255,255,0.1);
+  /* background: red; */
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  /* border: 1px solid #fff; */
+  /* background-color: rgba(189, 205, 251, 0.5);
+   */
+  /* background: rgba(255, 255, 255, 0.3); */
+  /* background: red; */
+  box-sizing: border-box;
+  border-radius: 100%;
+  animation: animate2 3s linear infinite;
   animation-delay: calc(0.5s * var(--i));
 }
 
 @keyframes animate {
   0% {
-    width: 260px;
-    height: 260px;
+    width: 300px;
+    height: 300px;
     opacity: 0.5;
   }
   50% {
     opacity: 0.5;
   }
   100% {
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
+    opacity: 0;
+  }
+}
+@keyframes animate2 {
+  0% {
+    width: 334px;
+    height: 334px;
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    width: 590px;
+    height: 590px;
     opacity: 0;
   }
 }
@@ -140,10 +198,10 @@ export default {};
 }
 
 .center {
-  width: 260px;
-  height: 260px;
+  width: 334px;
+  height: 334px;
   border-radius: 50%;
-  background: #647cec;
+  background: #5c8cff;
   position: absolute;
   top: 0;
   left: 0;
@@ -167,8 +225,8 @@ export default {};
     repeating-radial-gradient(rgba(32, 255, 77, 0) 5.8%, rgba(32, 255, 77, 0) 18%, #20ff4d 18.6%, rgba(32, 255, 77, 0) 18.9%),
     linear-gradient(90deg, rgba(32, 255, 77, 0) 49.5%, #20ff4d 50%, #20ff4d 50%, rgba(32, 255, 77, 0) 50.2%),
     linear-gradient(0deg, rgba(32, 255, 77, 0) 49.5%, #20ff4d 50%, #20ff4d 50%, rgba(32, 255, 77, 0) 50.2%);
-  width: 400px;
-  height: 400px;
+  width: 334px;
+  height: 334px;
   max-height: 75vh;
   max-width: 75vh;
   position: relative;
@@ -192,16 +250,16 @@ export default {};
   content: " ";
   display: block;
   background: #c7d4fb;
-
   width: 4px;
-  height: 70%;
+  height: 350px;
   position: absolute;
-  top: -20%;
+  top: -175px;
   left: 50%;
   animation: zhuan 5s infinite;
   animation-timing-function: linear;
   transform-origin: bottom right;
   border-radius: 100% 0 0 0;
+  box-shadow: -6px 0 10px #c7d4fb;
 }
 @keyframes zhuan {
   0% {
@@ -237,57 +295,11 @@ export default {};
     opacity: 0;
   }
 }
-/*.rotate-left-box {
-  position: absolute;
-  top: 0;
-  /~ left: -10px; ~/
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  background-image: linear-gradient(44deg, #fff 50%, rgba(0,0,0,0) 100%);
-}*/
-/* .rotate-left-box::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  background: red;
-} */
-/*.center::before,
-.center::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -10px;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 10px solid transparent;
-}
-.center::before {
-  border-top-color: #fff;
-  /~ animation: spin 5s linear infinite; ~/
-}*/
 
-/*
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
 .rotate-left-box {
   position: absolute;
-  width: 260px;
-  height: 260px;
+  width: 334px;
+  height: 334px;
   transform: scaleY(-1);
 }
 .rotate-left-box div,
@@ -295,8 +307,8 @@ export default {};
   position: absolute;
   /* css变量 环的宽度 */
   --s: 6px;
-  width: 260px;
-  height: 260px;
+  width: 334px;
+  height: 334px;
   border-radius: 50%;
   /* 网格布局 */
   display: grid;
@@ -317,8 +329,8 @@ export default {};
 }
 .rotate-right-box {
   position: absolute;
-  width: 260px;
-  height: 260px;
+  width: 334px;
+  height: 334px;
   transform: scaleX(-1);
 }
 
@@ -331,23 +343,28 @@ export default {};
 }
 .white-box {
   position: absolute;
-  height: 240px;
-  width: 240px;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
+  height: 314px;
+  width: 314px;
+  /* background-image: rgba(255, 255, 255, 0.4); */
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 10px solid #ffff; */
+  background-image: linear-gradient(151deg, rgba(94, 141, 255, 1), rgba(186, 206, 255, 1), rgba(112, 154, 255, 1));
+  border-radius: 50%;
+
+  padding: 1px;
+  box-sizing: border-box;
 }
 .word-box {
-  width: 210px;
-  height: 210px;
-  background: #6980ec;
+  width: 290px;
+  height: 290px;
+  background: #5c8cff;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 40px;
   color: #fff;
 }
 </style>
