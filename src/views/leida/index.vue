@@ -16,6 +16,11 @@
       <div class="back-image"></div>
       <div class="main">
         <div class="tangjialing">
+          <div class="pointer">
+            <div class="pointer-back"></div>
+            <div class="pointer-single"></div>
+          </div>
+
           <div class="center">
             <div class="rotate-left-box">
               <div></div>
@@ -68,10 +73,8 @@ export default {};
   justify-content: center;
   align-items: center;
 } */
- .back-image{
- 
-
- }
+.back-image {
+}
 
 .container span {
   position: absolute;
@@ -104,7 +107,7 @@ export default {};
   position: absolute;
   width: 300px;
   height: 300px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   /* background: red; */
   border: 2px solid rgba(255, 255, 255, 0.6);
   /* border: 1px solid #fff; */
@@ -217,14 +220,6 @@ export default {};
 }
 
 .tangjialing {
-  background: -webkit-radial-gradient(center, rgba(32, 255, 77, 0.3) 0%, rgba(32, 255, 77, 0) 75%),
-    -webkit-repeating-radial-gradient(rgba(32, 255, 77, 0) 5.8%, rgba(32, 255, 77, 0) 18%, #20ff4d 18.6%, rgba(32, 255, 77, 0) 18.9%),
-    -webkit-linear-gradient(90deg, rgba(32, 255, 77, 0) 49.5%, #20ff4d 50%, #20ff4d 50%, rgba(32, 255, 77, 0) 50.2%),
-    -webkit-linear-gradient(0deg, rgba(32, 255, 77, 0) 49.5%, #20ff4d 50%, #20ff4d 50%, rgba(32, 255, 77, 0) 50.2%);
-  background: radial-gradient(center, rgba(32, 255, 77, 0.3) 0%, rgba(32, 255, 77, 0) 75%),
-    repeating-radial-gradient(rgba(32, 255, 77, 0) 5.8%, rgba(32, 255, 77, 0) 18%, #20ff4d 18.6%, rgba(32, 255, 77, 0) 18.9%),
-    linear-gradient(90deg, rgba(32, 255, 77, 0) 49.5%, #20ff4d 50%, #20ff4d 50%, rgba(32, 255, 77, 0) 50.2%),
-    linear-gradient(0deg, rgba(32, 255, 77, 0) 49.5%, #20ff4d 50%, #20ff4d 50%, rgba(32, 255, 77, 0) 50.2%);
   width: 334px;
   height: 334px;
   max-height: 75vh;
@@ -245,22 +240,33 @@ export default {};
   animation-timing-function: linear;
   animation-delay: 1.4s; */
 }
-
-.tangjialing:after {
-  content: " ";
-  display: block;
+.pointer {
+  position: relative;
   background: #c7d4fb;
   width: 4px;
-  height: 350px;
+  height: 320px;
   position: absolute;
-  top: -175px;
+  top: -160px;
   left: 50%;
   animation: zhuan 5s infinite;
   animation-timing-function: linear;
   transform-origin: bottom right;
   border-radius: 100% 0 0 0;
-  box-shadow: -6px 0 10px #c7d4fb;
+  /* box-shadow: -6px 0 10px #c7d4fb; */
 }
+.pointer-back {
+  height: 320px;
+  width: 80px;
+  right: 0;
+  position: absolute;
+
+  background: radial-gradient( ellipse  at 127% 86%, rgba(158, 186, 255, 0.95) 0%, rgba(232, 239, 255, 0.22) 74%, rgba(255, 255, 255, 0) 100%);
+}
+/* .tangjialing:after {
+  content: " ";
+  display: block;
+ 
+} */
 @keyframes zhuan {
   0% {
     transform: rotate(0deg);
