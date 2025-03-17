@@ -1,6 +1,6 @@
 import Vue from "vue";
 import vueRouter from "vue-router";
-import App from "@/App";
+// import App from "@/App";
 
 Vue.use(vueRouter);
 
@@ -15,18 +15,18 @@ export default new vueRouter({
     },
     {
       path: "/keep",
-      component: () => import("@/views/keepalive/index.vue"),
+      // component: () => import("@/views/keepalive/index.vue"),
       name: "keepalive",
       meta: { title: "keepalive自己实现" },
       children: [
         {
-          path: "index1",
+          path: "/index1",
           name: "index1",
           component: () => import("@/views/testAlive/index1"),
           meta: { title: "index1", icon: "user", code: "permission.user" },
         },
         {
-          path: "index2",
+          path: "/index2",
           name: "index2",
           component: () => import("@/views/testAlive/index2"),
           meta: { title: "index2", icon: "tree", code: "permission.role" },
@@ -157,10 +157,11 @@ export default new vueRouter({
     },
     {
       path: "/commonAll",
-      component: App,
+      name: "jjj",
+      // component: App,
       children: [
         {
-          path: "networkState",
+          path: "/networkState",
           name: "networkState",
           component: () => import("@/views/networkState.vue"),
         },
@@ -261,6 +262,12 @@ export default new vueRouter({
       component: () => import("@/views/leida/index2.vue"),
       name: "leida2",
       meta: { title: "雷达效果" },
+    },
+    {
+      path: "/setPageColor",
+      component: () => import("@/views/setPageColor/index.vue"),
+      name: "setPageColor",
+      meta: { title: "一键换肤" },
     },
   ],
 });

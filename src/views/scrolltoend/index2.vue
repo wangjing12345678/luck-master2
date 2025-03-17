@@ -20,6 +20,7 @@ export default {
 </script>
 
 <style>
+/* css变量 */
 .aa {
   /* --aa-height: 20px; */
   height: var(--aa-height);

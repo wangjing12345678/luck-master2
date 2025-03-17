@@ -9,6 +9,7 @@ export default new Vuex.Store({
     //这里面写入数据
     aa: "lll",
     axiosFlag: false,
+    savePageRoute: [], //保存当前点击路由
   },
   getters: {
     // getters 类似 computed
@@ -21,6 +22,9 @@ export default new Vuex.Store({
     setaxiosFlag(state, val) {
       console.log("pppp", val);
       state.axiosFlag = val;
+    },
+    setSavePageRoute(state, val) {
+      state.savePageRoute = val;
     },
     // mutations 类似methods
     // 写方法对数据做出更改(同步操作)
